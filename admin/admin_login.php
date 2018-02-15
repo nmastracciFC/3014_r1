@@ -31,20 +31,25 @@ if(isset($_POST['submit'])){
 <head>
 	<meta charset="UTF-8">
 	<title>CMS Portal Login</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
 </head>
 <body>
-	
-	<h1>Welcome Company Name</h1>
-	<?php if(!empty($message)){ echo $message;} ?>
-	<form action="admin_login.php" method="post">
+	<section id="loginPage">
+		<div id="loginForm">
+		<h1>Welcome Company</h1>
+		<?php if(!empty($message)){ echo $message;} ?>
+			<form  action="admin_login.php" method="post">
 
-		<label>Username: </label>
-		<input type="text" name="username">
-		<br>
-		<label>Password: </label>
-		<input type="text" name="password">
-		<br>
-		<input type="submit" name="submit" value="show me the money">
-	</form>
+				<label>Username: </label>
+				<input type="text" name="username">
+				<br>
+				<label>Password: </label>
+				<input type="text" name="password">
+				<br>
+				<button id="button" type="submit" name="submit">LOGIN</button>
+			</form>
+		</div>
+	</section>
 </body>
 </html>

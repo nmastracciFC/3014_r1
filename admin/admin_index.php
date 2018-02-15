@@ -15,10 +15,12 @@ confirm_logged_in();
 <head>
 	<meta charset="UTF-8">
 	<title>CMS Portal Login</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
 </head>
 <body>
 	
-	<h1>Welcome Company Name</h1>
+	<h1>Welcome <?php echo {$_SESSION['user_name']}?></h1>
 
 
 	<?php echo "<h2> Hi {$_SESSION['user_name']}</h2>"  ?>

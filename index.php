@@ -28,6 +28,7 @@ if(isset($_GET['filter'])) {
 <head>
 <meta charset="UTF-8">
 <title>Welcome to the Finest Selection of Blu-rays on the internets!</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 <!-- we will use php to write out all the movies from read.php -->
