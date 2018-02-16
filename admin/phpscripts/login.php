@@ -40,7 +40,7 @@
 
  	} else if ($found_user['user_attempts'] < 3 ) {
  		$attempts = $found_user['user_attempts'] + 1;
- 		$attemptQuery = "UPDATE `tbl_user` SET `user_fail` = {$attempts} WHERE `user_id` = {$id} ";
+ 		$attemptQuery = "UPDATE tbl_user SET user_attempts = {$attempts} WHERE user_id = {$id} ";
  		$updateAttempts = mysqli_query($link, $attemptQuery);
  		$message = "Failed Login Attempt -- You only have three.";
  		return $message;
