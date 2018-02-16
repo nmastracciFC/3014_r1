@@ -15,3 +15,7 @@ Database is in db folder.
 -http://php.net/manual/en/book.session.php
 
 -http://php.net/manual/en/reserved.variables.session.php
+
+##### incrementing mysql tables #####
+
+-https://stackoverflow.com/questions/2762851/increment-a-database-field-by-1
