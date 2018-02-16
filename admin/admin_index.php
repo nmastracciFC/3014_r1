@@ -4,7 +4,7 @@ ini_set('display_errors',1);
 error_reporting(E_ALL);
 
 require_once('phpscripts/config.php');
-
+date_default_timezone_set("America/New_York");
 confirm_logged_in();
 
 $theHour = date('G');
