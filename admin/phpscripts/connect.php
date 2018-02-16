@@ -3,7 +3,7 @@
 	$user = "root";
 	$pass = "root";
 	$url = "localhost";
-	$db = "db_movies";
+	$db = "db_research3014";
 	
 	$link = mysqli_connect($url, $user, $pass, $db); //Mac
 	//$link = mysqli_connect($url, $user, $pass, $db); //PC

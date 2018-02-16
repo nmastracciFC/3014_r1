@@ -30,14 +30,14 @@ if(isset($_POST['submit'])){
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>CMS Portal Login</title>
+	<title>CMS Login</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	
 </head>
 <body>
 	<section id="loginPage">
 		<div id="loginForm">
-		<h1>Welcome Company</h1>
+		<h1>Welcome To Your Login!</h1>
 		<?php if(!empty($message)){ echo $message;} ?>
 			<form  action="admin_login.php" method="post">
 

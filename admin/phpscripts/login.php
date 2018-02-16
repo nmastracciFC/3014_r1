@@ -16,11 +16,14 @@
  		//sessions only exist on the server level and do not exist on the local machine. Do not use cookies to pass things they can be found and hacked into. As soon as the browser is closed the file is terminated. Only pass things around using a session because it requires someone to hack an entire server. BUT do not pass an entire session.. be specific.
  		$_SESSION['user_id'] = $id; //label user_id equals the variable id
  		$_SESSION['user_name'] = $found_user['user_fname'];//these variables are accessible to every page but only through the server
+ 		$_SESSION['user_lastlog'] = $found_user['user_lastlog'];
  		
  		if(mysqli_query($link, $loginstring)){
  			//if they've successfully logged in then update their ip address in the db
  			$updatestring = "UPDATE tbl_user SET user_ip = '$ip' WHERE user_id = {$id}";
+ 			$updateLastLogin = "UPDATE tbl_user SET user_lastlog = NOW() WHERE user_id = {$id}";
  			$updatequery = mysqli_query($link, $updatestring);
+ 			$updatequery2 = mysqli_query($link, $updateLastLogin);
  			// echo $ip;
  			
  		}
