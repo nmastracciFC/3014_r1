@@ -17,14 +17,9 @@
 
  		if($password == $found_user['user_pass'] && ($found_user['user_attempts'] < 3)){
  			$_SESSION['user_id'] = $id; //label user_id equals the variable id
- 		$_SESSION['user_name'] = $found_user['user_fname'];//these variables are accessible to every page but only through the server
+ 		$_SESSION['user_name'] = $found_user['user_fname'];
  		$_SESSION['user_lastlog'] = $found_user['user_lastlog'];
 
-
- 	
-
- 		
- 		
  		if($user_set && $user_set2){
  			//if they've successfully logged in then update their ip address in the db
  			$updatestring = "UPDATE tbl_user SET user_ip = '$ip' WHERE user_id = {$id}";
@@ -33,7 +28,7 @@
  			$updatequery = mysqli_query($link, $updatestring);
  			$updatequery2 = mysqli_query($link, $updateLastLogin);
  			$updatequery3 = mysqli_query($link, $updateAttempts);
- 			// echo $ip;
+ 			
  			
  		}
  		redirect_to('admin_index.php');
@@ -50,14 +45,13 @@
 
 
  	} else {
- 		// $_SESSION['user_attempts'] = $found_user['user_attempts'];
  		
  		$message = "Username or password is incorrect";
  		return $message;
  	}
 
 
- 	mysqli_close($link);//always make sure to close it off especially on a login
+ 	mysqli_close($link);
  }
 
 
