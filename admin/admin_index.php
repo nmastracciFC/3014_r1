@@ -20,10 +20,10 @@ confirm_logged_in();
 </head>
 <body>
 	
-	<h1>Welcome <?php echo {$_SESSION['user_name']}?></h1>
+	<h1>Welcome <?php echo $_SESSION['user_name'];?></h1>
 
 
-	<?php echo "<h2> Hi {$_SESSION['user_name']}</h2>"  ?>
+	<?php echo "<h2> Hi {$_SESSION['user_name']}</h2>";  ?>
 	
 </body>
 </html>
