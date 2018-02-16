@@ -28,13 +28,16 @@ if ( $theHour >= 3 && $theHour <= 11 ) {
 
 </head>
 <body>
+	<div class="side-bar">
 	
 	<h1>Welcome <?php echo $_SESSION['user_name'];?></h1>
 
 
-	<?php echo "<h2> Hi {$_SESSION['user_name']}</h2>";  ?>
-	<?php echo "<h2> You were last logged in at: {$_SESSION['user_lastlog']}</h2>";  ?>
+	<h2>You look beautiful today!</h2>
+	
+	<h2>Last Login: <?php echo date_create($_SESSION['user_lastlog'])->format('F d, Y  g:ia'); ?> </h2>
 	<?php echo $greeting; ?> <?php date_default_timezone_set("America/New_York"); echo "The time is " . date("h:ia");?>
+	</div>
 		
 </body>
 </html>

@@ -12,13 +12,12 @@ if(isset($_POST['submit'])){
 	$username = trim($_POST['username']);//trim method will check to make sure there is no whitespace
 	$password = trim($_POST['password']);
 
-	if($username !== "" && $password !== "") {
-		// echo 'you can type';
+	if($username !== "" && $password !== "") {;
 		$result = logIn($username, $password, $ip);
 		$message = $result;
 	}else {
 		$message = "Please fill in the required fields";
-		// echo $message;
+		
 	}
 
 }
