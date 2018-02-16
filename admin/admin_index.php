@@ -9,19 +9,12 @@ confirm_logged_in();
 
 $theHour = date('G');
 
-if ( $theHour >= 5 && $theHour <= 11 ) {
-
+if ( $theHour >= 3 && $theHour <= 11 ) {
 	$greeting = "Salute the Sun! It's rising JUST for you!";
-	// return $greeting;
-    // echo "Good Morning";
 } else if ( $theHour >= 12 && $theHour <= 18 ) {
 	$greeting = "Feeling like a nap? It must be the afternoon.";
-	// return $greeting;
-    // echo "Good Afternoon";
-} else if ( $theHour >= 19 || $theHour <= 4 ) {
+} else if ( $theHour >= 19 || $theHour <= 2 ) {
 	$greeting = "My, you're working late! Go to sleep. It's night time!";
-	// return $greeting;
-    // echo "Good Evening";
 };
 ?>
 
