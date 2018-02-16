@@ -4,9 +4,11 @@ Database is in db folder.
 
 ### Researched Links ###
 
-##### understanding date syntax #####
+##### understanding date syntax/formatting #####
 
 -http://www.php.net/manual/en/function.date.php
+
+-http://php.net/manual/en/datetime.format.php
 
 ##### understanding sessions #####
 
